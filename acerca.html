@@ -10,76 +10,170 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
-</head>
-<body style="font-family: 'Montserrat', sans-serif;">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8fafc;
+      padding-top: 100px;
+      padding-bottom: 80px;
+    }
 
-    <header class="text-white py-3 fixed-top shadow-sm" style="background-color: #0047AB;">
-    <div class="container text-center">
-      <h1 class="fs-4 fw-bold mb-2">MUNGUIA PEREZ LLC</h1>
-      
-      <nav class="d-flex justify-content-center gap-4 flex-wrap">
-        <a href="index.html" class="text-white text-decoration-none">Inicio</a>
-        <a href="proyectos.html" class="text-white text-decoration-none">Proyectos</a>
-        <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-        <a href="acerca.html" class="text-white text-decoration-none">Nosotros</a>
+    header h1 {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    .bi-building {
+  animation: floatIcon 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatIcon {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+
+    .nav-link-hover {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link-hover::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      bottom: -3px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    .nav-link-hover:hover::after {
+      width: 100%;
+    }
+
+    .nav-link-hover:hover {
+      color: #cce0ff;
+    }
+
+    .icono-animado {
+      transition: transform 0.4s ease;
+    }
+
+    .icono-animado:hover {
+      transform: scale(1.1) rotate(-2deg);
+    }
+  </style>
+</head>
+<body>
+  <header class="text-white py-3 fixed-top shadow-sm" style="background-color: #01357c;">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+      <div class="d-flex align-items-center gap-3">
+        <img src="img/logo.jpg" alt="Logo" style="height: 55px; border-radius: 10px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="text-white">
+          <h1 class="fs-4 fw-bold m-0" style="letter-spacing: 1px;">MUNGUIA PEREZ LLC</h1>
+          <small class="d-block" style="font-size: 0.8rem;">Construction – Remodeling and Finishing</small>
+        </div>
+      </div>
+
+      <nav class="d-flex gap-4 flex-wrap justify-content-center">
+        <a href="index.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Inicio</a>
+        <a href="proyectos.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Proyectos</a>
+        <a href="contacto.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Contacto</a>
+        <a href="acerca.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Nosotros</a>
       </nav>
     </div>
   </header>
 
-  <div style="height: 100px;"></div>
-
   <main class="container py-5">
     <div class="row justify-content-center">
-      <div class="col-md-10">
-        <div class="bg-white border border-2 border-primary rounded-4 shadow-lg p-5 position-relative overflow-hidden">
-          
-          <!-- Ícono decorativo -->
+      <div class="col-lg-10">
+        <div class="p-5 bg-white rounded-4 shadow-lg border-start border-4 border-primary position-relative">
+  
           <div class="text-center mb-4">
-            <i class="bi bi-building text-primary" style="font-size: 3rem;"></i>
-            <h2 class="fw-bold text-primary mt-2">Sobre Nosotros</h2>
+            <i class="bi bi-building text-primary" style="font-size: 3.5rem;"></i>
+            <h2 class="fw-bold mt-3 text-uppercase text-primary">¿Quiénes Somos?</h2>
+            <p class="text-muted fst-italic mt-2">Pasión por construir. Orgullo por entregar excelencia.</p>
+          </div>
+
+          <p class="lead text-center mb-5 text-dark">
+            <strong>MUNGUIA PEREZ LLC</strong> es una firma especializada en <span class="text-primary">construcción</span>, <span class="text-primary">remodelación</span> y <span class="text-primary">acabados</span> de alto nivel, creada para transformar espacios y cumplir sueños.
+          </p>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+            <div class="col">
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-award-fill fs-2 text-warning"></i>
+                <div>
+                  <h6 class="fw-bold mb-1">Calidad que se nota</h6>
+                  <p class="small mb-0 text-muted">Usamos materiales premium y estándares exigentes en cada obra.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-clock-history fs-2 text-primary"></i>
+                <div>
+                  <h6 class="fw-bold mb-1">Compromiso con el tiempo</h6>
+                  <p class="small mb-0 text-muted">Valoramos tu tiempo, por eso cumplimos plazos con precisión.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-people-fill fs-2 text-success"></i>
+                <div>
+                  <h6 class="fw-bold mb-1">Equipo confiable</h6>
+                  <p class="small mb-0 text-muted">Contamos con técnicos altamente capacitados y apasionados.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-house-door-fill fs-2 text-danger"></i>
+                <div>
+                  <h6 class="fw-bold mb-1">Proyectos personalizados</h6>
+                  <p class="small mb-0 text-muted">Cada cliente es único. Cada proyecto también.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <p class="fs-5 fw-semibold text-primary">Transformamos espacios con alma.</p>
+            <p class="text-muted fst-italic">Tu visión, nuestra misión.</p>
           </div>
   
-          <!-- Contenido -->
-          <p class="lead text-center mb-4">
-            <strong>MUNGUIA PEREZ LLC</strong> es una empresa comprometida con la excelencia en el sector de la construcción, remodelación y acabados. Con años de experiencia y un equipo altamente calificado, hemos llevado a cabo proyectos residenciales y comerciales de gran impacto y calidad.
-          </p>
-          <p>
-            Nuestra misión es brindar soluciones constructivas innovadoras, funcionales y estéticamente impecables. Nos enorgullece ofrecer un servicio personalizado, donde cada cliente recibe atención detallada y resultados garantizados.
-          </p>
-          <p>
-            Nos destacamos por nuestra responsabilidad, cumplimiento de tiempos de entrega, selección de materiales de alta calidad y por supuesto, la satisfacción de nuestros clientes.
-          </p>
-          <p class="fw-semibold text-primary">
-            ¡Gracias por confiar en nosotros para construir tus sueños!
-          </p>
         </div>
       </div>
     </div>
   </main>
   
+  
 
-  <footer class="text-white py-3 fixed-bottom" style="background-color: #0047AB;">
+  <footer class="text-white py-3 fixed-bottom" style="background-color: #01357c;">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
- 
+
       <div class="text-center text-md-start mb-2 mb-md-0">
         <strong>MUNGUIA PEREZ LLC</strong> |
-        <i class="bi bi-telephone-fill me-1"></i> +506 6000 1111 |
+        <i class="bi bi-telephone-fill me-1"></i> +1 786-881-9457 |
         <i class="bi bi-envelope-fill me-1"></i> info@munguia.com
       </div>
-  
+
       <div class="d-flex justify-content-center gap-3">
         <a href="https://wa.me/50660001111" target="_blank" class="text-white" title="WhatsApp">
           <i class="fab fa-whatsapp fa-lg"></i>
         </a>
-        <a href="https://facebook.com/tuusuario" target="_blank" class="text-white" title="Facebook">
+        <a href="https://www.facebook.com/share/1BetNkak8N/?mibextid=wwXIfr" target="_blank" class="text-white" title="Facebook">
           <i class="fab fa-facebook-f fa-lg"></i>
         </a>
-        <a href="https://instagram.com/tuusuario" target="_blank" class="text-white" title="Instagram">
-          <i class="fab fa-instagram fa-lg"></i>
-        </a>
       </div>
-  
-    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

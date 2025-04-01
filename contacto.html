@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MUNGUIA PEREZ LLC</title>
+  <title>Contacto - MUNGUIA PEREZ LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -10,73 +10,166 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8fafc;
+      padding-top: 100px;
+      padding-bottom: 80px;
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    .nav-link-hover {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link-hover::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      bottom: -3px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    .nav-link-hover:hover::after {
+      width: 100%;
+    }
+
+    .nav-link-hover:hover {
+      color: #cce0ff;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-contacto {
+      border: 2px solid #0047AB;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card-contacto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      border-radius: 12px;
+    }
+    .icon-circle {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+  </style>
+</head>
 <body>
-    <header class="text-white py-3 fixed-top shadow-sm" style="background-color: #0047AB;">
-        <div class="container text-center">
-          <h1 class="fs-4 fw-bold mb-2">MUNGUIA PEREZ LLC</h1>
-          
-          <nav class="d-flex justify-content-center gap-4 flex-wrap">
-            <a href="index.html" class="text-white text-decoration-none">Inicio</a>
-            <a href="proyectos.html" class="text-white text-decoration-none">Proyectos</a>
-            <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-            <a href="acerca.html" class="text-white text-decoration-none">Nosotros</a>
-          </nav>
+  <header class="text-white py-3 fixed-top shadow-sm" style="background-color: #01357c;">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+      <div class="d-flex align-items-center gap-3">
+        <img src="img/logo.jpg" alt="Logo" style="height: 55px; border-radius: 10px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="text-white">
+          <h1 class="fs-4 fw-bold m-0" style="letter-spacing: 1px;">MUNGUIA PEREZ LLC</h1>
+          <small class="d-block" style="font-size: 0.8rem;">Construction – Remodeling and Finishing</small>
         </div>
-      </header>
+      </div>
+
+      <nav class="d-flex gap-4 flex-wrap justify-content-center">
+        <a href="index.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Inicio</a>
+        <a href="proyectos.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Proyectos</a>
+        <a href="contacto.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Contacto</a>
+        <a href="acerca.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Nosotros</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="container py-5">
-    <h2 class="text-center mb-4">📬 Contáctanos</h2>
 
-
-    <div class="row justify-content-center mb-5">
-        <div class="col-md-6">
-          <div class="bg-white border border-2 border-primary rounded-4 shadow-lg p-4 text-center">
-            <!-- Ícono grande decorativo -->
-            <div class="mb-3">
-              <i class="bi bi-person-lines-fill text-primary" style="font-size: 3rem;"></i>
+    <h2 class="text-center mb-5 fw-bold">
+      <i class="bi bi-chat-square-text-fill me-2 text-primary"></i>📬 Contáctanos
+    </h2>
+  
+    <section class="row justify-content-center g-4 mb-5">
+  
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 shadow-lg border"
+          style="background-image: url('img/fondo-contacto.jpg'); background-size: cover; background-position: center; backdrop-filter: blur(5px);">
+  
+          <div class="bg-white bg-opacity-90 rounded-4 p-4">
+            <div class="text-center mb-4">
+              <h3 class="fw-bold text-primary">¡Estamos listos para ayudarte!</h3>
+              <p class="text-muted mb-0">Contáctanos por el medio que prefieras 📞📩📍</p>
             </div>
+  
 
-            <h4 class="mb-3 fw-bold text-primary">Información de contacto</h4>
+            <div class="row align-items-start">
 
-            <p>
-              <i class="bi bi-telephone-fill me-2"></i>
-              <strong>Teléfono:</strong> 
-              <a href="tel:+50660001111" class="text-decoration-none">+506 6000 1111</a>
-            </p>
-            <p>
-              <i class="bi bi-whatsapp me-2 text-success"></i>
-              <strong>WhatsApp:</strong> 
-              <a href="https://wa.me/50660001111" target="_blank" class="text-decoration-none">+506 6000 1111</a>
-            </p>
-            <p>
-              <i class="bi bi-envelope-fill me-2"></i>
-              <strong>Correo:</strong> 
-              <a href="mailto:info@munguia.com" class="text-decoration-none">info@munguia.com</a>
-            </p>
-            <p>
-              <i class="bi bi-geo-alt-fill me-2"></i>
-              <strong>Dirección:</strong> San José, Costa Rica
-            </p>
+              <div class="col-md-8">
+                <div class="d-flex align-items-start mb-3 gap-3">
+                  <div class="icon-circle bg-primary text-white"><i class="bi bi-telephone-fill fs-4"></i></div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Teléfono</h6>
+                    <a href="tel:+17868819457" class="text-decoration-none text-dark">+1 (786) 881-9457</a>
+                  </div>
+                </div>
+  
+                <div class="d-flex align-items-start mb-3 gap-3">
+                  <div class="icon-circle bg-success text-white"><i class="bi bi-whatsapp fs-4"></i></div>
+                  <div>
+                    <h6 class="fw-bold mb-1">WhatsApp</h6>
+                    <a href="https://wa.me/17868819457" target="_blank" class="text-decoration-none text-dark">+1 (786) 881-9457</a>
+                  </div>
+                </div>
+  
+                <div class="d-flex align-items-start mb-3 gap-3">
+                  <div class="icon-circle bg-danger text-white"><i class="bi bi-envelope-fill fs-4"></i></div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Correo</h6>
+                    <a href="mailto:info@munguia.com" class="text-decoration-none text-dark">info@munguia.com</a>
+                  </div>
+                </div>
+  
+                <div class="d-flex align-items-start gap-3">
+                  <div class="icon-circle bg-info text-white"><i class="bi bi-geo-alt-fill fs-4"></i></div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Dirección</h6>
+                    <p class="mb-0 small text-muted">1789 NW 43rd Street<br>Miami Beach, FL 33142</p>
+                  </div>
+                </div>
+              </div>
+  
+     
+              <div class="col-md-4 text-center">
+                <img src="img\qr.jpeg" alt="Código QR" class="img-fluid rounded-3 shadow-sm mb-2" style="max-width: 140px;">
+                <p class="text-muted small">Escaneá el código para contactarnos</p>
+              </div>
+            </div>
+  
           </div>
         </div>
       </div>
-      
-
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-10">
-        <div class="ratio ratio-16x9 border rounded shadow-sm">
-          <iframe
-            src="https://maps.google.com/maps?q=San%20José%20Costa%20Rica&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="text-center mb-4">📩 Envíanos un mensaje</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="bg-white p-4 rounded shadow-sm border">
+  
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 shadow-sm border h-100">
+          <h4 class="text-center fw-bold mb-4 text-primary">
+            <i class="bi bi-pencil-square me-2"></i>Envíanos un mensaje
+          </h4>
           <form onsubmit="enviarWhatsapp(); return false;">
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre completo</label>
@@ -90,46 +183,57 @@
               <label for="mensaje" class="form-label">Mensaje</label>
               <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-success w-100">Enviar mensaje por WhatsApp</button>
+            <button type="submit" class="btn btn-success w-100">
+              <i class="bi bi-whatsapp me-2"></i>Enviar mensaje por WhatsApp
+            </button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
+  
+  
+    <h2 class="text-center mb-4 fw-bold">
+      <i class="bi bi-geo-alt-fill me-2 text-primary"></i>Ubícanos
+    </h2>
+    <section class="row justify-content-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm border">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.6541258939055!2d-80.22847492405546!3d25.814982406400414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b12f280e0119%3A0x8dc4280dbb307449!2s1787%20NW%2043rd%20St%2C%20Miami%2C%20FL%2033142%2C%20EE.%20UU.!5e0!3m2!1ses-419!2scr!4v1743535639344!5m2!1ses-419!2scr"
+            style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  
   </main>
-
-  <footer class="text-white py-3 fixed-bottom" style="background-color: #0047AB;">
+  
+  
+  <footer class="text-white py-3 fixed-bottom" style="background-color: #01357c;">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
 
       <div class="text-center text-md-start mb-2 mb-md-0">
         <strong>MUNGUIA PEREZ LLC</strong> |
-        <i class="bi bi-telephone-fill me-1"></i> +506 6000 1111 |
+        <i class="bi bi-telephone-fill me-1"></i> +1 786-881-9457 |
         <i class="bi bi-envelope-fill me-1"></i> info@munguia.com
       </div>
-  
+
       <div class="d-flex justify-content-center gap-3">
         <a href="https://wa.me/50660001111" target="_blank" class="text-white" title="WhatsApp">
           <i class="fab fa-whatsapp fa-lg"></i>
         </a>
-        <a href="https://facebook.com/tuusuario" target="_blank" class="text-white" title="Facebook">
+        <a href="https://www.facebook.com/share/1BetNkak8N/?mibextid=wwXIfr" target="_blank" class="text-white" title="Facebook">
           <i class="fab fa-facebook-f fa-lg"></i>
         </a>
-        <a href="https://instagram.com/tuusuario" target="_blank" class="text-white" title="Instagram">
-          <i class="fab fa-instagram fa-lg"></i>
-        </a>
       </div>
-  
-    </div>
   </footer>
   <script>
     function enviarWhatsapp() {
-      const nombre = document.getElementById('nombre').value.trim();
-      const correo = document.getElementById('correo').value.trim();
-      const mensaje = document.getElementById('mensaje').value.trim();
-
-      const texto = `Hola, soy ${nombre}. Mi correo es ${correo}. Quiero decir: ${mensaje}`;
-      const numero = "50660001111"; // Reemplazá con tu número real
-
-      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const mensaje = document.getElementById('mensaje').value;
+      const texto = `Hola, soy ${nombre} (${correo}). Quisiera más información. Mensaje: ${mensaje}`;
+      const url = `https://wa.me/50660001111?text=${encodeURIComponent(texto)}`;
       window.open(url, '_blank');
     }
   </script>

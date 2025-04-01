@@ -13,12 +13,52 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
+</head>
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family:'Montserrat', sans-serif; background-color: #f8fafc;
       padding-top: 100px;
       padding-bottom: 80px;
+      background-color: #f8fafc;
+    }
+
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-link-hover {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link-hover::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: white;
+        transition: width 0.3s;
+      }
+
+    .nav-link-hover:hover::after {
+      width: 100%;
+    }
+
+    .nav-link-hover:hover {
+      color: #cce0ff;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     }
 
     .card img {
@@ -32,107 +72,132 @@
   </style>
 </head>
 <body>
+  <header class="text-white py-3 fixed-top shadow-sm" style="background-color: #01357c;">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
 
+      <div class="d-flex align-items-center gap-3">
+        <img src="img/logo.jpg" alt="Logo" style="height: 55px; border-radius: 10px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="text-white">
+          <h1 class="fs-4 fw-bold m-0" style="letter-spacing: 1px;">MUNGUIA PEREZ LLC</h1>
+          <small class="d-block" style="font-size: 0.8rem;">Construction – Remodeling and Finishing</small>
+        </div>
+      </div>
 
-  <header class="text-white py-3 fixed-top shadow-sm" style="background-color: #0047AB;">
-    <div class="container text-center">
-      <h1 class="fs-4 fw-bold mb-2">MUNGUIA PEREZ LLC</h1>
-      <nav class="d-flex justify-content-center gap-4 flex-wrap">
-        <a href="index.html" class="text-white text-decoration-none">Inicio</a>
-        <a href="proyectos.html" class="text-white text-decoration-none">Proyectos</a>
-        <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-        <a href="acerca.html" class="text-white text-decoration-none">Nosotros</a>
+      <nav class="d-flex gap-4 flex-wrap justify-content-center">
+        <a href="index.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Inicio</a>
+        <a href="proyectos.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Proyectos</a>
+        <a href="contacto.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Contacto</a>
+        <a href="acerca.html" class="text-white text-decoration-none fw-semibold position-relative nav-link-hover">Nosotros</a>
       </nav>
     </div>
   </header>
 
   <main class="container py-5">
-    <h2 class="text-center mb-4">🔨 Proyectos Realizados</h2>
-    <p class="text-center mb-5 lead">Conocé algunos de los trabajos destacados que hemos desarrollado para nuestros clientes. Calidad, compromiso y resultados garantizados.</p>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-
+    <h2 class="text-center mb-4 fw-bold">
+      <i class="fas fa-tools me-2 text-primary"></i>Proyectos Realizados
+    </h2>
+    <p class="text-center mb-5 lead text-muted">
+      Conocé algunos de los trabajos destacados que hemos desarrollado para nuestros clientes. Calidad, compromiso y resultados garantizados.
+    </p>
+  
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+  
+      <!-- Proyecto 1 -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="img/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
           <div class="card-body">
             <h5 class="card-title">Remodelación de Cocina</h5>
             <p class="card-text">Diseño moderno, materiales premium y entrega puntual.</p>
-            <a href="proyecto1.html" class="btn btn-primary btn-sm mt-2">Ver proyecto</a>
+            <a href="proyecto1.html" class="btn btn-outline-primary btn-sm mt-2">Ver proyecto</a>
           </div>
         </div>
       </div>
-
-
+  
+      <!-- Proyecto 2 -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="img/proyecto2.jpg" class="card-img-top" alt="Proyecto 2">
           <div class="card-body">
             <h5 class="card-title">Oficina Corporativa</h5>
             <p class="card-text">Espacio ejecutivo funcional y estético, llave en mano.</p>
+            <a href="proyecto2.html" class="btn btn-outline-primary btn-sm mt-2">Ver proyecto</a>
           </div>
         </div>
       </div>
-
-
+  
+      <!-- Proyecto 3 -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="img/proyecto3.jpg" class="card-img-top" alt="Proyecto 3">
           <div class="card-body">
             <h5 class="card-title">Renovación de Fachada</h5>
             <p class="card-text">Transformación completa con enfoque en detalles y durabilidad.</p>
+            <a href="proyecto3.html" class="btn btn-outline-primary btn-sm mt-2">Ver proyecto</a>
           </div>
         </div>
       </div>
-
-
+  
+      <!-- Proyecto 4 -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="img/proyecto4.jpg" class="card-img-top" alt="Proyecto 4">
           <div class="card-body">
             <h5 class="card-title">Acabados en Local Comercial</h5>
             <p class="card-text">Ambiente atractivo y profesional para maximizar el impacto visual.</p>
+            <a href="proyecto4.html" class="btn btn-outline-primary btn-sm mt-2">Ver proyecto</a>
           </div>
         </div>
       </div>
-
-
+  
+      <!-- Proyecto 5 -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="img/proyecto5.jpg" class="card-img-top" alt="Proyecto 5">
           <div class="card-body">
             <h5 class="card-title">Construcción de Terraza</h5>
             <p class="card-text">Espacio abierto ideal para reuniones y relajación.</p>
+            <a href="proyecto5.html" class="btn btn-outline-primary btn-sm mt-2">Ver proyecto</a>
           </div>
         </div>
       </div>
+  
+      <!-- Proyecto 6 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/proyecto6.jpg" class="card-img-top" alt="Proyecto 6">
+          <div class="card-body">
+            <h5 class="card-title">Ampliación Residencial</h5>
+            <p class="card-text">Más espacio, mejor distribución y acabados personalizados para una vivienda familiar.</p>
+            <a href="proyecto6.html" class="btn btn-outline-primary btn-sm mt-2">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+  
     </div>
   </main>
-  <footer class="text-white py-3 fixed-bottom" style="background-color: #0047AB;">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
   
+</body>
+</html>
 
-      <div class="text-center text-md-start mb-2 mb-md-0">
-        <strong>MUNGUIA PEREZ LLC</strong> |
-        <i class="bi bi-telephone-fill me-1"></i> +506 6000 1111 |
-        <i class="bi bi-envelope-fill me-1"></i> info@munguia.com
-      </div>
-  
+<footer class="text-white py-3 fixed-bottom" style="background-color: #01357c;">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
 
-      <div class="d-flex justify-content-center gap-3">
-        <a href="https://wa.me/50660001111" target="_blank" class="text-white" title="WhatsApp">
-          <i class="fab fa-whatsapp fa-lg"></i>
-        </a>
-        <a href="https://facebook.com/tuusuario" target="_blank" class="text-white" title="Facebook">
-          <i class="fab fa-facebook-f fa-lg"></i>
-        </a>
-        <a href="https://instagram.com/tuusuario" target="_blank" class="text-white" title="Instagram">
-          <i class="fab fa-instagram fa-lg"></i>
-        </a>
-      </div>
-  
+    <div class="text-center text-md-start mb-2 mb-md-0">
+      <strong>MUNGUIA PEREZ LLC</strong> |
+      <i class="bi bi-telephone-fill me-1"></i> +1 786-881-9457 |
+      <i class="bi bi-envelope-fill me-1"></i> info@munguia.com
     </div>
-  </footer>
+
+    <div class="d-flex justify-content-center gap-3">
+      <a href="https://wa.me/50660001111" target="_blank" class="text-white" title="WhatsApp">
+        <i class="fab fa-whatsapp fa-lg"></i>
+      </a>
+      <a href="https://www.facebook.com/share/1BetNkak8N/?mibextid=wwXIfr" target="_blank" class="text-white" title="Facebook">
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+    </div>
+</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
